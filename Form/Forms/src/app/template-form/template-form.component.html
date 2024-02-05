@@ -1,0 +1,44 @@
+<div class="container p-4 bg-dark">
+   <div class="card p-5">
+        <div class="card-header">
+            <h3>Template Driven Form</h3>
+        </div>
+        <div class="card-body">
+            <form #tempForm="ngForm" (ngSubmit)="storeData(tempForm)">
+                <div class="form-group">
+                    <label class="form-label fw-bold">User Name</label>
+                    <input type="text" class="form-control"
+                    name="userName" ngModel 
+                    (click)="restart()"
+                    required
+                    minlength=3>
+                </div>
+                <div class="alert" *ngIf="tempForm.errors || tempForm.touched">
+                    <div *ngIf="tempForm.errors?.['required']" >Name is required</div>
+                    
+                    <div *ngIf="tempForm.errors?.['minlength']" >Minimum length 3 characters</div>
+                </div>
+
+                <div class="mt-2">
+                    <label class="form-label fw-bold">Password</label>
+                    <input type="password" class="form-control"
+                    name="pass" ngModel 
+                    (click)="restart()">
+                </div>
+                <div class="mt-2">
+                    <input type="submit" class="btn btn-info fw-bold" value="Login">
+                </div>
+            </form>
+            <div *ngIf="isActive then dataBlock;"></div>
+
+            <ng-template #dataBlock>
+                <div class="card-body bg-dark mt-3 text-light">
+                    <ul class="list-unstyled">
+                        <li> {{info.userName}} </li>
+                        <li> {{info.pass}} </li>
+                    </ul>
+                </div>
+            </ng-template>
+        </div>
+   </div>
+</div>
