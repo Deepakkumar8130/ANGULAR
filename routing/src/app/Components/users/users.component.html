@@ -1,28 +1,13 @@
 <div class=" row justify-content-center">
-
-    
-    
-    <div class="card m-3" style="width: 18rem;"  *ngFor="let i of users">
-        <div class="text-center m-3">
+    <div class="card m-3 p-1" style="width: 18rem;"  *ngFor="let i of users">
+        <div class=" card-header text-center mb-2">
             <img src={{i.img}} class="card-img-top  rounded-circle" alt="...">
         </div>
-        <div class="card-header">
-            <h5 class="text-center">{{i.name}}</h5>
+        <div class="card-body p-0">
+            <h3 class="text-center">{{i.name}}</h3>
         </div>
-        <div class="card-body">
-        <i class="fa fa-envelope">&nbsp;&nbsp; {{i.email}}</i>
+        <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-sm btn-outline-info">Get Info</button>
+            <a href="mailto:{{i.email}}" class="btn btn-sm btn-outline-info"><i class="fa fa-envelope"></i></a>
         </div>
-    <!-- </div>
-    <div class="card m-3" style="width: 18rem;">
-        <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-    </div>
-    <div class="card m-3" style="width: 18rem;">
-        <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-    </div> -->
 </div>

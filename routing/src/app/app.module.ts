@@ -8,6 +8,9 @@ import { AboutComponent } from './Components/about/about.component';
 import { UsersComponent } from './Components/users/users.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { CultureComponent } from './Components/about/culture/culture.component';
+import { MissionComponent } from './Components/about/mission/mission.component';
+import { VissionComponent } from './Components/about/vission/vission.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { FooterComponent } from './Components/footer/footer.component';
     AboutComponent,
     UsersComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CultureComponent,
+    MissionComponent,
+    VissionComponent
   ],
   imports: [
     BrowserModule,

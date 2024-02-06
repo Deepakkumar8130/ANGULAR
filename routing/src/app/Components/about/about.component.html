@@ -1,1 +1,15 @@
-<p>about works!</p>
+<div class="bg-dark vw-100 vh-100">
+    <div class="bg-info text-center p-4">
+        <h1 class="fw-bold">About Us</h1>
+    </div>
+    <div class="conatiner p-5">
+        <ul class="list-unstyled d-flex justify-content-between">
+            <li><a routerLink="/about/mission" class="btn btn-info">Mission</a></li>
+            <li><a routerLink="/about/vission" class="btn btn-info">Vission</a></li>
+            <li><a routerLink="/about/culture" class="btn btn-info">Culture</a></li>
+        </ul>
+    </div>
+    <div class="container alert alert-secondary">
+        <router-outlet></router-outlet>
+    </div>
+</div>
